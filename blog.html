@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Answer </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-8">
+    <!-- first question  -->
+    <h3 class="text-2xl font-semibold">Question-1 : Difference Between forEach, map, filter and find ? </h3>
+    <p class="mt-2">Answer : </p> <p class="font-semibold"> ForEach, Map, Filter, and Find are all array methods in JavaScript, but they differ in their functionality and the way they modify or return arrays.  </p> <p class="font-bold inline">forEach : </p> <p class="inline"> forEach iterates over each element in an array and performs a function on each element, but it does not modify the original array. The return value of forEach is always undefined.</p> <br>
+    <p class="font-bold inline-block">map    :</p> <p class="inline">map also iterates over each element in an array and performs a function on each element, but it creates a new array with the results of that function applied to each element. The original array remains unchanged.</p> <br>
+    <p class="font-bold inline-block">filter : </p> <p class="inline">filter creates a new array with all elements that pass a test specified by a function. The original array remains unchanged.</p> <br>
+    <p class="font-bold inline-block">find :</p> <p class="inline">find returns the first element in an array that passes a test specified by a function. If no element passes the test, undefined is returned.</p>
+     <!-- second question  -->
+     <h3 class="text-2xl mt-4 font-semibold">Question-2 : Difference Between Local Storage , Session Storage and Cookies ?</h3> 
+     <p class="mt-2">Answer : </p> <p class="font-semibold">localStorage, sessionStorage, and cookies are all used for  storage in web browsers, but they differ in their functionality and limitations.</p>
+     <p class="font-bold inline-block">LocalStorage : </p> <p class="inline">localStorage will persist even after the user closes the browser or restarts their computer. localStorage is shared between all tabs and windows from the same origin. This storage store up to 5-10 mb of data,depending on the browser.</p> <br>
+     <p class="font-bold inline-block">SessionStorage : </p> <p class="inline">It is same to local storage in terms of syntax and usage .but it has a difference 
+         that the data is only available for the duration of the browser session. 
+     </p> <br>
+     <p class="font-bold inline-block">Cookies :</p> <p class="inline"> Cookies are small text files that are stored on the user's computer by the web server. They are often used for session management, user preferences, and tracking. Cookies can have an expiration date and can be set to persist across sessions.</p>
+ 
+     <!-- third question  -->
+     <h3 class="text-2xl mt-4 font-semibold">Question-3 : What is event loop and how it was work ?</h3> 
+     <p>Answer : </p> 
+     <P class="inline-block font-bold">Event Loop : </P> <p class="inline">JavaScript has a runtime model based on an event loop, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks.JS executes all operations on a single thread, but using a few smart data structures, it gives us the illusion of multi-threading. </p> <br> 
+     <p class="inline-block font-bold">Here is how the event loop works : </p> 
+     <ol >
+        <li> 1.The event loop has an event queue where it stores all the events that need to be processed.</li>
+        <li>2.When an event occurs (such as a user clicking a button), it is added to the event queue</li>
+        <li>3.The event loop continuously checks the event queue for any pending events. If there is an event in the queue, the event loop removes it from the queue and processes it.</li>
+        <li>4.The event loop assigns the event to the appropriate callback function, which is then executed.</li>
+        <li>5.While the callback function is being executed, the event loop continues to check the event queue for any pending events.</li>
+        <li>6.If there are no more events in the queue, the event loop waits for new events to be added to the queue.</li>
+        <li>7. Once the callback function is completed, any new events that were generated during the execution of the callback function are added to the event queue, and the event loop starts the process over again.</li>
+     </ol>
+     <h3 class="text-2xl mt-4 font-semibold">Question-4 :How the quizTimer function work ?</h3> 
+     <p>Answer : </p> 
+     <p>The function quizTimer that takes a parameter dismiss name . If the value of dismiss is truthy then the function clears the interval timer using the clearInterval function and returns.If dismiss is true, the function clears the timer using clearInterval and returns. Otherwise, it sets up an interval using setInterval that runs a callback function every 1000 milliseconds.It then formats the time as a string in the format mm:ss and updates the HTML content of the countHtml element with this string.
+     </p>
+     <h3 class="text-2xl mt-4 font-semibold">Question-5 :How the chooseQuiz function work ?</h3>
+     <p>Answer:</p>
+     <p>The function first checks if there is already an answer for the current question (identified by its id) stored in the answers array. It does this by using the find method to look for an answer object in the array with an id property that matches the id of the current question in quizData index.
+        If no answer object is found, it creates a new object that combines the current question in quizData with the givenAns value, and adds it to the answers array using the push method.
+     </p>
+</body>
+</html>
